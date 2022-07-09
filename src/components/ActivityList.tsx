@@ -20,7 +20,7 @@ const ActivityList: React.FC = () => {
         setActivities(res.data)
       })
     }
-  }, [loginContext.token])
+  })
 
   const toggleSelectActivity = (toggledActivity: StravaSummaryActivity) => {
     if(selectedActivities.has(toggledActivity.id)) {
