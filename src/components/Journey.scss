@@ -1,0 +1,78 @@
+.journey {
+  background-color: #FFF;
+  padding: .5rem;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(13,13,18,.04);
+  border-radius: 4px;
+  margin: 1rem 0;
+
+  &__athlete_info {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    margin: .5rem 0;
+
+    p {
+      margin: 0;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    &--name {
+      font-size: 18px;
+    }
+
+    &--dates {
+      color: #6d6d78;
+    }
+
+    &--locations {
+      color: #6d6d78;
+    }
+  }
+  
+  &__name {
+    font-size: 30px;
+    margin: .5rem 0;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    &--item {
+
+    }
+
+    &--label {
+      color: #6d6d78;
+      margin: 0;
+    }
+
+    &--value {
+      font-size: 30px;
+      margin: 0;
+    }
+  }
+
+  &__leg--title {
+      font-size: 24px;
+      margin: 0;
+  }
+
+
+  .map-container {
+    height: 300px;
+    margin-bottom: 2rem;
+
+    padding: 0;
+    button{
+      display: none;
+    }
+  }
+}

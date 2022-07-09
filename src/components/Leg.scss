@@ -1,0 +1,37 @@
+.leg {
+  // box-shadow: 0 8px 24px rgba(13,13,18,.04);
+  display: flex;
+  gap: 2px;
+  margin-bottom: .5rem;
+
+  p {
+    margin: 0;
+  }
+
+  &__number {
+    background-color: #FC5200;
+    color: white;
+    padding: .1rem;
+    font-size: 18px;
+  }
+  
+  &__graphic {
+    background: #FFF;
+    padding: .4rem;
+
+    path {
+      stroke: #FC5200;
+    }
+  }
+  &__detail {
+    font-size: 18px;
+
+    &--name {
+      font-size: 22px;
+    }
+
+    &--stat {
+      color: #6d6d78;
+    }
+  }
+}

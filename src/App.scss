@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css');
+
+.App {
+  font-family: 'VT323', monospace;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 600px;
+  margin: 1rem auto;
+
+  h1 {
+    color:#FC5200;
+    font-size: 4rem;
+    margin: 0;
+
+    span {
+      background-color: #FC5200;
+      color: #FFF;
+      padding: 0 1rem;
+
+    }
+  }
+}
+

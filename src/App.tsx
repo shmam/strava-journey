@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import ActivityList from './components/ActivityList';
+import Login from './components/Login';
+import { StravaAthlete } from './strava.types';
 
-function App() {
+export const LoginContext = React.createContext<LoginContextType>({
+  loggedIn: false,
+  token: '',
+  user: undefined
+})
+
+const App: React.FC = () => {
+  const [loggedIn, setLoggedIn] = useState<boolean>(false)
+  const [token, setToken] = useState<string>('')
+  const [user, setUser] = useState<StravaAthlete>()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>imagine....</p>
+      <h1><span>STRAVA</span> Journey</h1>
+      <p>(noun): an act of traveling from one place to another.</p>
+      <LoginContext.Provider value={{loggedIn, token, user}}>
+        {loggedIn &&
+          <ActivityList />
+        }
+        <Login
+          setLoggedIn={setLoggedIn}
+          setToken={setToken}
+          setUser={setUser}
+        />
+      </LoginContext.Provider>
+
+      <p>made with ❤️ and curiocity by <a href='https://samcrochet.dev'>Sam Crochet</a></p>
     </div>
   );
+}
+
+export interface LoginContextType {
+  loggedIn: boolean;
+  token: string;
+  user: StravaAthlete | undefined;
 }
 
 export default App;

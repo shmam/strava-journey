@@ -1,0 +1,82 @@
+
+.ActivityList {
+  background-color: #FFF;
+  padding: .5rem;
+  box-shadow: 0 8px 24px rgba(13,13,18,.04);
+  border-radius: 4px;
+  margin: 1rem 0;
+
+  &__toolbar {
+    display: flex;
+    &--info {
+      font-size: 1.2rem;
+      margin: .5rem 0;
+    }
+    
+  }
+
+  &__scrollview {
+    border: 1px rgb(243, 243, 243) solid;
+    height: 200px;
+    overflow-x: scroll;
+  }
+
+  &__item {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    padding: .2rem .2rem;
+    gap: 1rem;
+    color: #FC5200;
+
+    &:hover {
+      background-color: #fc5400b6;
+      color: white;
+    }
+
+    &--selected {
+      @extend .ActivityList__item;
+      background-color: #FC5200;
+      color: white;
+
+      &:hover {
+        background-color: #FC5200;
+        color: white;
+      }
+    }
+
+
+    &--data {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--title {
+      display: flex;
+      flex-direction: row;
+      font-weight: 700;
+      font-size: 1.3rem;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    &--meta {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      color: #6d6d78;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__button {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    border-color: #FC5200;
+    color:#FC5200;
+    background-color: #FFF;
+    border-style: solid;
+  }
+}
