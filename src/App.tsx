@@ -32,6 +32,7 @@ const App: React.FC = () => {
       </LoginContext.Provider>
 
       <p>made with ❤️ and curiocity by <a href='https://samcrochet.dev'>Sam Crochet</a></p>
+      <p className='disclaimer'>DISCLAIMER: This is not in any way affiliated with Strava Inc.</p>
     </div>
   );
 }

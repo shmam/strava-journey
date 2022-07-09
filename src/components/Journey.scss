@@ -43,11 +43,9 @@
   &__stats {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1.3rem;
 
-    &--item {
-
-    }
 
     &--label {
       color: #6d6d78;
